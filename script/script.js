@@ -13,6 +13,13 @@ function hitungLuas() {
     }
   }
   
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("kalkulatorLuas");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      hitungKeliling();
+    });
+  });
 
   
 
@@ -25,13 +32,7 @@ function hitungLuas() {
 
 function hitungKeliling() {
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("kalkulatorLuas");
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      hitungKeliling();
-    });
-  });
+  
 
 
     const sisi1 = parseFloat(document.getElementById('sisi1').value);
@@ -48,6 +49,14 @@ function hitungKeliling() {
       document.getElementById('hasilKeliling').textContent = `Keliling segitiga: ${keliling}`;
     }
   }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("calculator-form");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      hitungKeliling();
+    });
+  });
 
   function resetFormLuas() {
     document.getElementById('calculator-form').reset();
